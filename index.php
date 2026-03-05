@@ -1,6 +1,5 @@
 <?php
 // Personal Profile Data
-$guest = $_GET["yourname"];
 
 $profile = [
     "name" => "Rayhan Rabiul Tsani",
@@ -484,7 +483,7 @@ $profile = [
     <header class="hero">
         <div>
             <div class="hero-badge">Available for work</div>
-            <h1>Hello, <?= $guest ?>. My Name is <?= htmlspecialchars($profile['name']) ?><span>.</span></h1>
+            <h1> My Name is <?= htmlspecialchars($profile['name']) ?><span>.</span></h1>
             <p class="hero-title"><?= htmlspecialchars($profile['title']) ?></p>
             <p class="hero-tagline"><?= htmlspecialchars($profile['tagline']) ?></p>
         </div>
