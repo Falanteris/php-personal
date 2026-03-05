@@ -1,6 +1,8 @@
 <?php
 // Personal Profile Data
+$tz = $_GET["tz"] ?? "Asia/Jakarta";
 
+$date = shell_exec('TZ="'.$tz.'" date');
 $profile = [
     "name" => "Rayhan Rabiul Tsani",
     "title" => "Security Enthusiast",
@@ -478,11 +480,12 @@ $profile = [
 </head>
 <body>
 <div class="container">
-
+    
     <!-- HERO -->
     <header class="hero">
         <div>
             <div class="hero-badge">Available for work</div>
+            <p class="hero-title" style="font-color: white;"><b><?= $date ?></b></p>
             <h1> My Name is <?= htmlspecialchars($profile['name']) ?><span>.</span></h1>
             <p class="hero-title"><?= htmlspecialchars($profile['title']) ?></p>
             <p class="hero-tagline"><?= htmlspecialchars($profile['tagline']) ?></p>
