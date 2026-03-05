@@ -2,7 +2,7 @@
 // Personal Profile Data
 $tz = $_GET["tz"] ?? "Asia/Jakarta";
 
-$date = shell_exec('TZ="'.$tz.'" date');
+$date = escapeshellcmd(shell_exec('TZ="'.$tz.'" date'));
 $profile = [
     "name" => "Rayhan Rabiul Tsani",
     "title" => "Security Enthusiast",
